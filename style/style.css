@@ -1,0 +1,71 @@
+#root{
+  background-color: #EAE8FE;
+}
+.ir{
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+.header-h1{
+  margin: 0 auto;
+  width: 386px;
+  height: 180px;
+}
+.header-h1 .img-logo{
+  width: 100%;
+  height: 100%;  
+}
+/* main start */
+main{
+  margin-top: 67px;
+ display: flex;
+ justify-content: center; 
+}
+/* 주문 자판기 시작 */
+.order{
+  width: 360px;
+  height: 545px;
+  padding: 31px 27px 28px 27px;
+  background-color: white;
+}
+.drink-con{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.drink-con .figure-drink{
+  width: 94px;
+  height: 130px;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  box-sizing: border-box;
+  border: 3px solid #F1F1F1;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 12px;
+}
+.figure-drink .img-drink{
+  width: 36px;
+  height: 64px;
+  margin-bottom: 6px;
+}
+.img-drink-caption p:nth-child(1){
+  margin-bottom: 7px;
+  font-size: 9px;
+}
+.img-drink-caption p:nth-child(2){
+  font-size: 9px;
+  background: #6327FE;
+  border-radius: 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 70px;
+  height: 17px;
+  color: white;
+  line-height: 17px;
+}
+
