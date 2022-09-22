@@ -34,7 +34,7 @@ main{
 .drink-con{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 12px;
 }
 .drink-con .figure-drink{
   width: 94px;
@@ -42,7 +42,6 @@ main{
   text-align: center;
   padding-top: 11px;
   padding-bottom: 9px;
-  box-sizing: border-box;
   border: 3px solid #F1F1F1;
   border-radius: 10px;
   background-color: white;
@@ -54,18 +53,103 @@ main{
   margin-bottom: 6px;
 }
 .img-drink-caption p:nth-child(1){
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   font-size: 9px;
 }
 .img-drink-caption p:nth-child(2){
-  font-size: 9px;
+  font-size: 12px;
   background: #6327FE;
+  display: inline-block;
   border-radius: 50px;
   margin: 0 auto;
-  box-sizing: border-box;
-  width: 70px;
-  height: 17px;
+  padding: 2px 12px;
   color: white;
   line-height: 17px;
+  font-weight: bold;
 }
 
+.calculate-con{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.calculate-con .balance{
+  width: 200px;
+  background-color: #EAE8FE;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: 5px;
+  align-items: center;
+}
+.calculate-con .btn-cart{
+  width: 94px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #F1F1F1;
+  box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.25);
+}
+.calculate-con .input-deposit_amount{
+  width: 200px;
+  box-sizing: border-box;
+  font-size: 13px;
+  padding: 6px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+.cart-con{
+  margin-top: 11px;
+  display: flex;
+  gap: 12px;
+  height: 106px;
+}
+.cart-con .ul-drinks{
+  width: 200px;
+  background-color: #EAE8FE;
+  border-radius: 5px;
+  padding: 12px 18px 12px;
+  overflow-y: scroll;
+}
+.cart-con .ul-drinks .li-drink{
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.ul-drinks .li-drink .img-cart-drink{
+  width: 18px;
+  height: 33px;
+  margin-right: 13px;
+}
+.ul-drinks .li-drink .p-cart-name{
+  font-size: 9px;
+  font-weight: 500;
+}
+.ul-drinks .li-drink .span-cart-count{
+  border: 1px solid #bdbdbd;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 21px;
+  border-radius: 5px;
+}
+.cart-con .btn-get{
+  background-color: #6327FE;
+  border: 1px solid ;
+  box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.25);
+  color: white;
+  width: 94px;
+  border-radius: 5px;
+  font-weight: 700;
+font-size: 13px;
+}
