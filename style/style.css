@@ -47,6 +47,10 @@
   border-radius: 10px;
   background-color: white;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+.drink-con .selected{
+  border: 3px solid #6327FE;
 }
 .sold-out{
   position: relative;
@@ -236,6 +240,9 @@
 /* 반응형 */
 
 @media screen and (max-width:768px) {
+  #root{
+    /* background-color: white; */
+  }
   .main-wrapper {
       align-items: center;
       flex-direction: column;
