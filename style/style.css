@@ -232,3 +232,12 @@ main{
 }
 
 /* 주문 완료 끝 */
+
+/* 반응형 */
+
+@media screen and (max-width:768px) {
+  main {
+      align-items: center;
+      flex-direction: column;
+  }
+}
