@@ -26,8 +26,9 @@
   gap: 28px;
 }
 /* 주문 자판기 시작 */
+/* 질문: 반응형 만들때 대부분 max-width가 좋은가? */
 .order{
-  width: 360px;
+  max-width: 360px;
   height: 545px;
   padding: 31px 27px 28px 27px;
   background-color: white;
@@ -246,5 +247,7 @@
   .main-wrapper {
       align-items: center;
       flex-direction: column;
+      /* margin-top: 0; */
+      /* gap: 0; */
   }
 }
