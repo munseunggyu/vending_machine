@@ -93,87 +93,48 @@ class Vending{
   }
 }
 
-// const vending = new Vending()
+const vending = new Vending()
 
-// data.forEach(drink => vending.addDrink(drink.name,drink.price,drink.count,drink.img))
+data.forEach(drink => vending.addDrink(drink.name,drink.price,drink.count,drink.img))
 
-// const drinkContainer = document.querySelector('.drink-con')
+const drinkContainer = document.querySelector('.drink-con')
 
-// const frag2 = document.createDocumentFragment()
+const frag2 = document.createDocumentFragment()
 
-// // const calculate = document.querySelector('.calculate')
-// // console.log(calculate)
+// const calculate = document.querySelector('.calculate')
+// console.log(calculate)
 
-// const cartUl = document.querySelector('.ul-drinks')
-// // 카트에 담긴 드링크 ul
+const cartUl = document.querySelector('.ul-drinks')
+// 카트에 담긴 드링크 ul
 
 
-// const frag = document.createDocumentFragment()
+const frag = document.createDocumentFragment()
 
-// vending.getDrink().forEach(drink => {
-//   const figure = document.createElement('figure')
-//   figure.classList.add('figure-drink')
+vending.getDrink().forEach(drink => {
+  const figure = document.createElement('figure')
+  figure.classList.add('figure-drink')
   
-//   // 자판기 클릭시 
-//   figure.addEventListener('click',() => {
-//     vending.cart(drink.name)  // vending의 cart실행
-//     cartUl.innerHTML = '' // 카트안을 지우고 다시 그린다.
-//     for(let i in vending.cartTotal){ //cartTotal을 순회하며 그려준다.
-//       getCarts(vending.cartTotal[i])
-//     }
-//   })
 
+  const drinkImg = document.createElement('img')
+  drinkImg.classList.add('img-drink')
+  drinkImg.setAttribute('src',drink.img)
+  drinkImg.setAttribute('alt','')
 
-//   const drinkImg = document.createElement('img')
-//   drinkImg.classList.add('img-drink')
-//   drinkImg.setAttribute('src',drink.img)
-//   drinkImg.setAttribute('alt','')
+  const figcaption = document.createElement('figcaption')
+  figcaption.classList.add('img-drink-caption')
 
-//   const figcaption = document.createElement('figcaption')
-//   figcaption.classList.add('img-drink-caption')
+  const drinkName = document.createElement('p')
+  drinkName.innerText = drink.name
 
-//   const drinkName = document.createElement('p')
-//   drinkName.innerText = drink.name
+  const drinkPrice = document.createElement('p')
+  drinkPrice.innerText = drink.price
 
-//   const drinkPrice = document.createElement('p')
-//   drinkPrice.innerText = drink.price
+  figcaption.appendChild(drinkName)
+  figcaption.appendChild(drinkPrice)
 
-//   figcaption.appendChild(drinkName)
-//   figcaption.appendChild(drinkPrice)
+  figure.appendChild(drinkImg)
+  figure.appendChild(figcaption)
+  frag.appendChild(figure)
+})
+drinkContainer.appendChild(frag)
 
-//   figure.appendChild(drinkImg)
-//   figure.appendChild(figcaption)
-//   frag.appendChild(figure)
-// })
-// drinkContainer.appendChild(frag)
-
-// // 카트에 그려주기
-// function getCarts(item){
-//   console.log(vending.cartTotal)
-//   const cartLi = document.createElement('li')
-//   cartLi.classList.add('li-drink')
-
-//   const cartContainer = document.createElement('div')
-//   cartContainer.classList.add('drink-con')
-
-//   const cartImg = document.createElement('img')
-//   cartImg.classList.add('img-drink')
-//   cartImg.setAttribute('src',item.img)
-//   cartImg.setAttribute('alt','')
-
-//   const cartP = document.createElement('p')
-//   cartP.classList.add('p-name')
-//   cartP.innerText = item.name
-
-//   const cartCount = document.createElement('span')
-//   cartCount.classList.add('span-count')
-//   cartCount.innerText = item.cartCount
-
-
-//   cartContainer.appendChild(cartImg)
-//   cartContainer.appendChild(cartP)
-  
-//   cartLi.appendChild(cartContainer)
-//   cartLi.appendChild(cartCount)
-//   cartUl.appendChild(cartLi)
-// }
