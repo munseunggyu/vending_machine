@@ -93,23 +93,17 @@ class Vending{
   }
 }
 
+// 자판기 생성
 const vending = new Vending()
 
+// 자판기에 data에 있는 음료수 넣어준다.
 data.forEach(drink => vending.addDrink(drink.name,drink.price,drink.count,drink.img))
-
-const drinkContainer = document.querySelector('.drink-con')
-
-const frag2 = document.createDocumentFragment()
-
-// const calculate = document.querySelector('.calculate')
-// console.log(calculate)
-
-const cartUl = document.querySelector('.ul-drinks')
-// 카트에 담긴 드링크 ul
-
 
 const frag = document.createDocumentFragment()
 
+const cartUl = document.querySelector('#cart')
+
+// 자판기 안의 음료수들을 순회한다.
 vending.getDrink().forEach(drink => {
   const figure = document.createElement('figure')
   figure.classList.add('figure-drink')
@@ -119,10 +113,9 @@ vending.getDrink().forEach(drink => {
     vending.cart(drink.name)  // vending의 cart실행
     cartUl.innerHTML = '' // 카트안을 지우고 다시 그린다.
     for(let i in vending.cartTotal){ //cartTotal을 순회하며 그려준다.
-      getCarts(vending.cartTotal[i])
+      getCarts(vending.cartTotal[i], cartUl)
     }
   })
-
 
   const drinkImg = document.createElement('img')
   drinkImg.classList.add('img-drink')
@@ -145,10 +138,12 @@ vending.getDrink().forEach(drink => {
   figure.appendChild(figcaption)
   frag.appendChild(figure)
 })
+const drinkContainer = document.querySelector('.drink-con')
 drinkContainer.appendChild(frag)
 
 // // 카트에 그려주기
-function getCarts(item){
+
+function getCarts(item,ul){
   console.log(vending.cartTotal)
   const cartLi = document.createElement('li')
   cartLi.classList.add('li-drink')
@@ -175,5 +170,30 @@ function getCarts(item){
   
   cartLi.appendChild(cartContainer)
   cartLi.appendChild(cartCount)
-  cartUl.appendChild(cartLi)
+  ul.appendChild(cartLi)
 }
+
+// 처음 잔액 0원
+const calculate = document.querySelector('.calculate')
+calculate.innerText = vending.money +'원'
+
+// 입금 버튼 누르면 자판기의 Money에 더 해준다.
+const moneyInput = document.querySelector('.input-deposit_amount')
+const cartBtn = document.querySelector('.inputBtn')
+cartBtn.addEventListener('click', () =>{
+  vending.money = +vending.money + +moneyInput.value
+  moneyInput.value = 0
+  calculate.innerText = vending.money + '원'
+})
+
+const getUl = document.querySelector('#get')
+// 획득 버튼 클릭
+const getBtn = document.querySelector('.btn-get')
+getBtn.addEventListener('click', () => {
+  cartUl.innerHTML = '' // 카트안을 지우고 다시 그린다.
+  for(let i in vending.cartTotal){ //cartTotal을 순회하며 그려준다.
+    getCarts(vending.cartTotal[i],getUl )
+  }
+  vending.cartTotal = []
+})
+

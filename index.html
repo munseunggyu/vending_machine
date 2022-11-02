@@ -22,20 +22,22 @@
       <section class="order">
         <h3 class="ir">음료수 주문하기</h3>
         <div class="drink-con">
-          <!-- 자바스크리트로 추가 -->
+          <!-- 자바스크리트로 제어 -->
         </div>
 
         <div class="calculate-con">
         <p class="balance">
           <span>잔액:</span>
-          <span class="calculate">1,000원</span>
+          <span class="calculate"></span>
         </p>
         <button class="btn-cart">거스름돈 반환</button>
+
         <input class="input-deposit_amount" type="number" placeholder="입금액 입력">
-        <button class="btn-cart">입금</button>
+        <button class="btn-cart inputBtn">입금</button>
+
       </div>
       <div class="cart-con">
-        <ul class="ul-drinks cart-list-with">
+        <ul id="cart" class="ul-drinks cart-list-with">
           <!-- 자바스크립트로 제어 -->
         </ul>
         <button class="btn-get">
@@ -53,35 +55,8 @@
         </section>
         <section class="section-get-drink">
           <h3 class="h3-get-drink">획득한 음료</h3>
-          <ul class="ul-drinks get-drink-height">
-            <li class="li-drink">
-              <div class="drink-con">
-                <img class="img-drink" src="./images/Original_Cola.png" alt="Original_Cola">
-                <p class="p-name">Original_Cola</p>
-              </div>
-              <span class="span-count">1</span>
-            </li>
-            <li class="li-drink">
-              <div class="drink-con">
-                <img class="img-drink" src="./images/Green_Cola.png" alt="Green_Cola">
-                <p class="p-name">Green_Cola</p>
-              </div>
-                <span class="span-count">2</span>
-            </li>
-            <li class="li-drink">
-              <div class="drink-con">
-                <img class="img-drink" src="./images/Orange_Cola.png" alt="Orange_Cola">
-                <p class="p-name">Orange_Cola</p>
-              </div>
-                <span class="span-count">1</span>
-            </li>
-            <li class="li-drink">
-              <div class="drink-con">
-                <img class="img-drink" src="./images/Violet_Cola.png" alt="Violet_Cola">
-                <p class="p-name">Violet_Cola</p>
-              </div>
-                <span class="span-count">5</span>
-            </li>
+          <ul id="get" class="ul-drinks get-drink-height">
+            <!-- 자바스크립트로 제어 -->
           </ul>
           <strong class="total-moeny">
             총금액: 9,000원
