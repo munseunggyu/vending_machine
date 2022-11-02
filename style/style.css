@@ -42,12 +42,10 @@
   width: 94px;
   height: 130px;
   text-align: center;
-  padding-top: 11px;
-  padding-bottom: 9px;
+  padding: 11px 0 9px;
   border: 3px solid #F1F1F1;
   border-radius: 10px;
   background-color: white;
-  margin-bottom: 12px;
   cursor: pointer;
 }
 .drink-con .selected{
@@ -68,7 +66,7 @@
   left: 0;
   background-image: url('../images/Sold-out.png');
   background-position: center;
-  background-size: contain;
+  background-size: 70px 60px;
   background-repeat: no-repeat;
 }
 .figure-drink .img-drink{
@@ -78,7 +76,7 @@
 }
 .img-drink-caption p:nth-child(1){
   margin-bottom: 5px;
-  font-size: 9px;
+  font-size: 10px;
 }
 .img-drink-caption p:nth-child(2){
   font-size: 12px;
@@ -98,6 +96,7 @@
   gap: 11px 12px;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 12px;
 }
 .calculate-con .balance{
   width: 200px;
@@ -115,7 +114,7 @@
   padding: 6px 0;
   font-size: 13px;
   font-weight: 500;
-  border: 1px solid #F1F1F1;
+  border: transparent;
   box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.25);
 }
 .calculate-con .input-deposit_amount{
@@ -126,13 +125,13 @@
   border: 1px solid #bdbdbd;
   border-radius: 5px;
 }
+/* placehoder 색 설정할것 */
 .cart-con{
   margin-top: 11px;
   display: flex;
   height: 106px;
   width: 306px;
   gap: 12px;
-
 }
 .ul-drinks{
   width: 100%;
@@ -230,7 +229,7 @@
 }
 .total-moeny{
   display: block;
-  text-align: end;
+  text-align: right;
   margin-top: 12px;
   font-weight: 500;
   font-size: 12px;
@@ -242,12 +241,12 @@
 
 @media screen and (max-width:768px) {
   #root{
-    /* background-color: white; */
+    background-color: white;
   }
   .main-wrapper {
       align-items: center;
       flex-direction: column;
-      /* margin-top: 0; */
-      /* gap: 0; */
+      margin-top: 0;
+      gap: 0;
   }
 }
